@@ -28,6 +28,33 @@ li {
     padding: 5px;
 }
 
+
+.kopf {
+    position: relative;
+}
+
+.custom-shape-divider-top-1699885465 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1699885465 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 110px;
+}
+
+.custom-shape-divider-top-1699885465 .shape-fill {
+    fill: #4A90E2;
+}
+
+
+
 .headerbild {
     background-image: url("../img/Startbild.png");
     background-repeat: no-repeat;
