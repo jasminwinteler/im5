@@ -28,9 +28,9 @@ li {
     padding: 5px;
 }
 
-
-.kopf {
+.welle {
     position: relative;
+    height: 50px;
 }
 
 .custom-shape-divider-top-1699885465 {
@@ -46,14 +46,12 @@ li {
     position: relative;
     display: block;
     width: calc(100% + 1.3px);
-    height: 110px;
+    height: 50px;
 }
 
 .custom-shape-divider-top-1699885465 .shape-fill {
-    fill: #4A90E2;
+    fill: #e2ecf5;
 }
-
-
 
 .headerbild {
     background-image: url("../img/Startbild.png");
@@ -70,6 +68,35 @@ li {
     position: relative;
     width: 100%;
     height: 100%;
+}
+
+.welle-headerbild {
+    position: relative;
+}
+
+.custom-shape-divider-top-1700142486 {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    overflow: hidden;
+    line-height: 0;
+}
+
+.custom-shape-divider-top-1700142486 svg {
+    position: relative;
+    display: block;
+    width: calc(100% + 1.3px);
+    height: 50px;
+    transform: rotateY(180deg);
+}
+
+.custom-shape-divider-top-1700142486 .shape-fill {
+    fill: #FFFFFF;
+}
+
+.einfuehrung {
+    background-color: teal;
 }
 
 .title-text {
@@ -89,10 +116,30 @@ li {
     animation-fill-mode: forwards;
 }
 
-.linie {
+/*.linie {
     border: 1px solid grey;
     width: 80%;
-}
+}*/
+
+.spikes {
+    position: relative;
+    background: teal;
+    height: 1vh;
+  }
+  
+  .spikes::after {
+    content: '';
+    position: absolute;
+    right: 0;
+    left: -0%;
+    top: 100%;
+    z-index: 10;
+    display: block;
+    height: 10px;
+    background-size: 10px 100%;
+    background-image: linear-gradient(135deg, teal 25%, transparent 25%), linear-gradient(225deg, teal 25%, transparent 25%);
+    background-position: 0 0;
+  }
 
 .medusa {
     padding: 0 60px 0 60px;
@@ -111,10 +158,10 @@ li {
     grid-area: medusatext;
  }
   
-  .saeule { 
+  .saeule img { 
     grid-area: saeule;
-    width: 10%;
-    height: 10%;
+    width: 50%;
+    height: 50%;
  }
   
   .medusatitel { 
@@ -132,23 +179,3 @@ li {
 }
 
 
-
-#demo {
-	width: 100%;
-	height: 150px;
-	position: relative;
-}
-
-#demo::before {
-	content: '';
-	position: absolute;
-	bottom: -30px;
-	left: 0;
-	right: 0;
-	height: 60px;
-	background-size: 24px 48px;
-	background-repeat: repeat-x;
-	background-image: -webkit-linear-gradient(45deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%), -webkit-linear-gradient(315deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%);
-	background-image: -moz-linear-gradient(45deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%), -moz-linear-gradient(315deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%);
-	background-image: linear-gradient(45deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%), linear-gradient(315deg, transparent 34%, #045B76 34%, #045B76 66%, transparent 66%);
-}
