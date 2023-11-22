@@ -96,7 +96,7 @@ li {
 }
 
 .einfuehrung {
-    background-color: teal;
+    background-color: #e2ecf5;
 }
 
 .title-text {
@@ -109,17 +109,37 @@ li {
 .text-einfuehrung {
     display: flex;
     justify-content: center;
-    padding: 30px 200px 30px 200px;
+    padding: 30px 200px 0px 200px;
     text-align: center;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
     animation-fill-mode: forwards;
 }
 
-/*.linie {
+#unterbruch-einfuehrung {
+    position: relative;
+    padding-top: 5px;
+    background-color: #e2ecf5;
+  }
+  #unterbruch-einfuehrung:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 100%;
+    margin-top: -1px; /* solves an issue with subpixel rendering sometimes showing a seam */
+    left: 0;
+    right: 0;
+    height: 21px;
+    background-image: url('../img/paper-tear-blue-01-01.png');
+  }
+
+.linie {
     border: 1px solid grey;
     width: 80%;
-}*/
+
+    margin-left: auto;
+    margin-right: auto;
+}
 
 .spikes {
     position: relative;
@@ -142,7 +162,7 @@ li {
   }
 
 .medusa {
-    padding: 0 60px 0 60px;
+    padding: 60px 60px 0 60px;
     display: grid;
     grid-template-columns: 1.2fr 0.8fr;
     grid-template-rows: 0.05fr 1.9fr;
@@ -168,6 +188,69 @@ li {
     grid-area: medusatitel;
  }
   
+h3 {
+    text-align: left;
+}
+
+.goetter {
+    display: flex;
+    justify-content: space-around;
+    align-items: center;
+    padding: 0 70px 0 70px;
+    gap: 30px;
+    /* background-color: blue; */
+}
+
+ .gott-athena {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: row;
+    /* background-color: turquoise; */
+}
+
+.athena {
+    text-align: center;
+    padding: 0 15px 0 15px;
+    /*background-image: url('../img/Athena.png');
+    background-size: 100%;*/
+}
+
+.gott-poseidon {
+    display: flexbox;
+    justify-content: space-between;
+    align-items: center;
+    align-content: center;
+    flex-direction: row; 
+}
+
+.poseidon {
+    text-align: center;
+    padding: 0 15px 0 15px;
+}
+
+#unterbruch {
+    position: relative;
+    background-color: #fff;
+    padding: 20px;
+    padding-bottom: 10px;
+  }
+  #unterbruch:after {
+    content: ' ';
+    display: block;
+    position: absolute;
+    top: 100%;
+    margin-top: -1px; /* solves an issue with subpixel rendering sometimes showing a seam */
+    left: 0;
+    right: 0;
+    height: 37px;
+    background-image: url('https://gschoppe.com/wp-content/uploads/2018/04/seamless-paper-tear.png');
+  }
+
+  .me {
+    padding: 50px;
+  }
 
 @keyframes fadeInAnimation {
     0% {
