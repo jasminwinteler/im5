@@ -97,6 +97,7 @@ li {
 
 .einfuehrung {
     background-color: #e2ecf5;
+    /*animation: fadeIn 5s;*/
 }
 
 .title-text {
@@ -109,7 +110,9 @@ li {
 .text-einfuehrung {
     display: flex;
     justify-content: center;
-    padding: 30px 200px 0px 200px;
+    padding-top: 30px;
+    max-width: 900px;
+    margin: 0 auto;
     text-align: center;
     animation: fadeInAnimation ease 3s;
     animation-iteration-count: 1;
@@ -162,30 +165,23 @@ li {
   }
 
 .medusa {
-    padding: 60px 60px 0 60px;
-    display: grid;
-    grid-template-columns: 1.2fr 0.8fr;
-    grid-template-rows: 0.05fr 1.9fr;
-    grid-auto-columns: 1fr;
-    gap: 5px 5px;
-    grid-auto-flow: row;
-    grid-template-areas:
-      "medusatitel medusatitel"
-      "medusatext saeule";
+    padding: 0px 70px 60px 70px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    gap: 30px;
+  }
+
+  .medusatitel {
+    padding: 30px 0 0 70px;
   }
   
   .medusatext { 
-    grid-area: medusatext;
+
  }
   
   .saeule img { 
-    grid-area: saeule;
-    width: 50%;
-    height: 50%;
- }
-  
-  .medusatitel { 
-    grid-area: medusatitel;
+    width: 60%;
  }
   
 h3 {
@@ -249,7 +245,9 @@ h3 {
   }
 
   .me {
-    padding: 50px;
+    padding: 70px;
+    background-color: #404040;
+    color: white;
   }
 
 @keyframes fadeInAnimation {
@@ -260,5 +258,29 @@ h3 {
         opacity: 1;
     }
 }
+
+/* -------------------------- */
+/* ------- RESPONSIVE ------- */
+/* -------------------------- */
+
+@media (max-width: 1200px) {
+    .text-einfuehrung {
+        max-width: 700px;
+    }
+}
+
+@media (max-width: 768px) {
+    .text-einfuehrung {
+        max-width: 100%;
+        padding: 30px 50px 0 50px;
+    }
+}
+
+@media (max-width: 480px) {
+    .text-einfuehrung {
+        padding: 30px 30px 0 30px;
+    }
+}
+
 
 
