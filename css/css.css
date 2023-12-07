@@ -21,6 +21,8 @@ nav{
     list-style-type: none;
     display: flex;
     justify-content: flex-end;
+    font-size: 3vw;
+    padding-right: 50px;
 }
 
 li {
@@ -60,6 +62,7 @@ li {
     height: 100%;
     width: 100%;
     padding-top: 30%;
+    margin-bottom: 50px;
    /* position: relative;*/
 }
 
@@ -95,7 +98,7 @@ li {
     fill: #FFFFFF;
 }
 
-.einfuehrung {
+.einfuehrungBg {
     background-color: #e2ecf5;
     /*animation: fadeIn 5s;*/
 }
@@ -169,6 +172,7 @@ li {
     display: flex;
     justify-content: space-around;
     align-content: flex-start;
+    align-items: center;
     gap: 30px;
   }
 
@@ -177,11 +181,16 @@ li {
   }
   
   .medusatext { 
+    width: 70%;
+ }
 
+ .saeule {
+    width: 30%;
  }
   
   .saeule img { 
-    width: 60%;
+    width: 50%;
+    height: auto;
  }
   
 h3 {
@@ -244,10 +253,39 @@ h3 {
     background-image: url('https://gschoppe.com/wp-content/uploads/2018/04/seamless-paper-tear.png');
   }
 
+  .me-titel {
+    padding-left: 30px;
+  }
+
   .me {
     padding: 70px;
     background-color: #404040;
     color: white;
+  }
+
+  .me-box {
+    padding: 30px 30px 70px 30px;
+    display: flex;
+    justify-content: space-around;
+    align-content: flex-start;
+    align-items: center;
+    gap: 30px;
+  }
+
+.about {
+    width: 70%;
+}
+
+.bild-jasmin {
+    width: 30%;
+}
+
+  .bild-jasmin img {
+    height: auto;
+    width: 70%;
+    border-radius: 200px;
+	-moz-border-radius: 200px;
+	-webkit-border-radius: 200px
   }
 
 @keyframes fadeInAnimation {
@@ -259,6 +297,62 @@ h3 {
     }
 }
 
+/* -------------------------- */
+/* ----- ANIMATIONS --------- */
+/* -------------------------- */
+
+/* fade in von unten */
+.fade-in {
+    position: relative;
+    transform: translateY(50px);
+    opacity: 0;
+    transition: 2s all ease;
+    
+  }
+  
+  .active {
+    transform: translateY(0);
+    opacity: 1;
+    z-index: 999;
+    overflow: hidden;
+  }
+  
+  /* fade in von links */
+  .fade-in-left {
+      /* transform: translateX(-50%);  */
+      /* transform: translateY(200); */
+      transform: translate3d(-150px, 0, 0);
+  }
+  
+  .fade-in-left.active {
+      /* transform: translateX(0); */
+      /* transform: translateY(0); */
+      transform: translate3d(0, 0, 0);
+  }
+  
+  
+  /* fade in von rechts */
+  .fade-in-right {
+      transform: translate3d(150px, 0, 0);
+  }
+  
+  .fade-in-right.active {
+      transform: translateX(0);
+      transform: translate3d(0, 0, 0);
+  }
+  
+  /* fade in von oben */
+  .fade-in-top {
+      transform: translateY(-50px);
+  }
+  
+  .fade-in-top.active {
+      transform: translateY(0);
+  }
+  
+  
+  
+  
 /* -------------------------- */
 /* ------- RESPONSIVE ------- */
 /* -------------------------- */
@@ -274,11 +368,50 @@ h3 {
         max-width: 100%;
         padding: 30px 50px 0 50px;
     }
+
+
 }
 
 @media (max-width: 480px) {
     .text-einfuehrung {
-        padding: 30px 30px 0 30px;
+        max-width: 70%;
+        padding: 15px 40px 0 40px;
+    }
+
+    .title-text {
+        padding-top: 40px;
+    }
+
+    .medusa {
+        flex-direction: column;
+    }
+
+    .medusatitel {
+        text-align: center;
+        padding: 40px 0 20px 0;
+        margin: 0;
+    }
+
+    .medusatext {
+        text-align: center;
+        width: 90%;
+    }
+
+    .saeule img {
+        text-align: center;
+    }
+
+    .goetter {
+        flex-direction: column;
+    }
+
+    .me-titel {
+        text-align: center;
+        padding: 0;
+    }
+
+    .me-box {
+        flex-direction: column;
     }
 }
 
